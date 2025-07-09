@@ -1,10 +1,6 @@
 name: 'Hello world workflow'
 
-on:
-  push:
-    branches:
-      - main
-      - test
+on: push
 
 jobs:
   hello_world:
