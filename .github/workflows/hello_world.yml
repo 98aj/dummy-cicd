@@ -1,0 +1,14 @@
+name: 'Hello world workflow'
+
+on:
+  push:
+    branches:
+      - main
+      - test
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Print hello world'
+        run: echo 'Hello world this is my first ci cd job using github actions'
