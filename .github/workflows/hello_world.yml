@@ -8,21 +8,10 @@ on:
       - main
       - dummyBr
 
-jobs:
+jobs: 
+  
   hello_world: # job 1
     runs-on: ubuntu-latest
     steps:
       - name: 'Print hello world'
         run: echo 'Hello world this is my first ci cd job using github actions'
-    
-  on-push:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Running on main/dummyBr push'
-        run: echo 'Running on mian/dummyBr push'
-  
-  on-pull:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Running on main/dummyBr pull'
-        run: echo 'Running on mian/dummyBr pull'
