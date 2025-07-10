@@ -12,6 +12,9 @@ on:
     branches:
         - main
         - dummyBr
+  
+  workflow_dispatch: # this is envent for maullay triggering pipline
+
 
 jobs:    
   on-push:
@@ -27,3 +30,10 @@ jobs:
     steps:
       - name: 'Running on main/dummyBr pull'
         run: echo 'Running on mian/dummyBr pull'
+  
+  workflow_dispatchFun: # This funcion will only run when we manually trigger pipline
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+        - name: 'Manullay Triggering pipline'
+          run: echo 'Running on manually trigger.'

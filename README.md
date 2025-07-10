@@ -23,10 +23,10 @@ Create a folder named `.github/workflows/` at the root of your project.
 mkdir -p .github/workflows
 bash```
 
-Step 2: Create a Workflow YAML File
+### ✅ Step 2: Create a Workflow YAML File
 Create a file like dummy-ci.yml inside .github/workflows/.
 
-Step 3: Define Workflow Structure
+### ✅ Step 3: Define Workflow Structure
 Each GitHub Actions YAML file consists of:
 
 name – Workflow name
@@ -35,6 +35,6 @@ on – Event that triggers the workflow (push, pull_request, schedule, etc.)
 
 jobs – A set of actions to run on the specified trigger
 
-Step 4: Add Conditions Using GitHub Events
+### ✅ Step 4: Add Conditions Using GitHub Events
 GitHub provides predefined events to control when your workflow runs.
 You can define these under the on: section in your YAML file.
