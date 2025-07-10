@@ -1,13 +1,16 @@
 name: 'Hello world workflow'
 
+# To check for all branches use on : push, it can be check for any action like pull push etc
+
 on:
   push:
     branches:
       - main
-      - test
+      - dummyBr
 
-jobs:
-  hello_world:
+jobs: 
+  
+  hello_world: # job 1
     runs-on: ubuntu-latest
     steps:
       - name: 'Print hello world'

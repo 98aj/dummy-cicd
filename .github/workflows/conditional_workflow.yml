@@ -1,0 +1,29 @@
+name: 'Conditional workflow'
+
+# To check for all branches use on : push, it can be check for any action like pull push etc
+
+on:
+  push:
+    branches:
+      - main
+      - dummyBr
+    
+  pull_request:
+    branches:
+        - main
+        - dummyBr
+
+jobs:    
+  on-push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Running on main/dummyBr push'
+        run: echo 'Running on mian/dummyBr push'
+  
+  on-pull:
+    if: github.event_name == 'pull-request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Running on main/dummyBr pull'
+        run: echo 'Running on mian/dummyBr pull'
